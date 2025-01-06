@@ -1,50 +1,14 @@
-# React + TypeScript + Vite
+1. 프로젝트 소개 (Project Introduction)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 버스 알림 서비스 (Bus Notification Service)
 
-Currently, two official plugins are available:
+사용자가 설정한 시간 전에 **가장 가까운 버스 도착 정보를 푸시 알림**으로 알려주고, 
+정류장 및 버스 정보를 **실시간**으로 확인할 수 있는 어플리케이션입니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+프로젝트 목적: 출퇴근, 등하교 등 특정 시간에 버스를 자주 이용하는 사용자가 미리 버스 도착 정보를 받아 편리하게 이용할 수 있도록 한다.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+주요 기능:
+정류장 검색 및 버스 도착 시간 확인
+알림 설정(도착 X분 전 푸시 알림)
+즐겨찾기(자주 이용하는 정류장 관리)
+카카오 로그인 연동
